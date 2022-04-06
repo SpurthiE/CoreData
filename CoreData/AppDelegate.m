@@ -12,10 +12,12 @@
 @end
 
 @implementation AppDelegate
-
+@synthesize managedObjContext = _managedObjContext;
+@synthesize mangedObjModel = _mangedObjModel;
+@synthesize persistentStoreContainer = _persistentStoreContainer;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    NSLog(@"Document Path: %@",[[[NSFileManager defaultManager]URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask]lastObject]);
     return YES;
 }
 
@@ -68,7 +70,30 @@
     
     return _persistentContainer;
 }
+-(NSManagedObjectContext *)managedObjContext {
+    if (_managedObjContext != nil) {
+        return  _managedObjContext;
+    }
+    NSPersistentStoreCoordinator *coordinator = [self persistentStoreContainer];
+    if (coordinator != nil) {
+        _managedObjContext = [[NSManagedObjectContext alloc]init];
+        [_managedObjContext setPersistentStoreCoordinator:coordinator];
+    }
+    return _managedObjContext;
+}
 
+- (NSManagedObjectModel *)mangedObjModel {
+    if (_mangedObjModel != nil)
+    {
+        return _mangedObjModel;
+    }
+    NSURL *modelUrl = [[NSBundle mainBundle]URLForResource:@"CoreData" withExtension:@"momd"];
+    _mangedObjModel = [[NSManagedObjectModel alloc]initWithContentsOfURL:modelUrl];
+    return  _mangedObjModel;
+}
+-(NSURL *)applicationDocumentDirectory {
+    return  [[[NSFileManager defaultManager]URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask]lastObject];
+}
 #pragma mark - Core Data Saving support
 
 - (void)saveContext {

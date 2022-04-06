@@ -11,9 +11,12 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjContext;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *mangedObjModel;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreContainer;
 
 - (void)saveContext;
-
+-(NSURL *)applicationDocumentDirectory;
 
 @end
 

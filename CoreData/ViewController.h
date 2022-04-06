@@ -6,9 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
-
+#import "AppDelegate.h"
+@interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong) NSMutableArray *contactArray;
+@property (strong,nonatomic)AppDelegate *delegate;
 
 @end
 

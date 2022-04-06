@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA54839127FACA040084BC75 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA54839027FACA040084BC75 /* SecondViewController.m */; };
+		EA69CCB027FACFE700E1AEE4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA69CCAF27FACFE700E1AEE4 /* CoreData.framework */; };
 		EA7B6EF327F6FA5B0027216E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7B6EF227F6FA5B0027216E /* AppDelegate.m */; };
 		EA7B6EF627F6FA5B0027216E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7B6EF527F6FA5B0027216E /* SceneDelegate.m */; };
 		EA7B6EF927F6FA5B0027216E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7B6EF827F6FA5B0027216E /* ViewController.m */; };
@@ -38,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA54838F27FACA040084BC75 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		EA54839027FACA040084BC75 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		EA69CCAF27FACFE700E1AEE4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EA7B6EEE27F6FA5B0027216E /* CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7B6EF127F6FA5B0027216E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA7B6EF227F6FA5B0027216E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA69CCB027FACFE700E1AEE4 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA69CCAE27FACFE700E1AEE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA69CCAF27FACFE700E1AEE4 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EA7B6EE527F6FA5B0027216E = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +104,7 @@
 				EA7B6F0F27F6FA5E0027216E /* CoreDataTests */,
 				EA7B6F1927F6FA5E0027216E /* CoreDataUITests */,
 				EA7B6EEF27F6FA5B0027216E /* Products */,
+				EA69CCAE27FACFE700E1AEE4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +121,8 @@
 		EA7B6EF027F6FA5B0027216E /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				EA54838F27FACA040084BC75 /* SecondViewController.h */,
+				EA54839027FACA040084BC75 /* SecondViewController.m */,
 				EA7B6EF127F6FA5B0027216E /* AppDelegate.h */,
 				EA7B6EF227F6FA5B0027216E /* AppDelegate.m */,
 				EA7B6EF427F6FA5B0027216E /* SceneDelegate.h */,
@@ -269,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA54839127FACA040084BC75 /* SecondViewController.m in Sources */,
 				EA7B6F0727F6FA5E0027216E /* main.m in Sources */,
 				EA7B6EFF27F6FA5B0027216E /* CoreData.xcdatamodeld in Sources */,
 				EA7B6EF927F6FA5B0027216E /* ViewController.m in Sources */,
